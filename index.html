@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f6eee7">
+<title>For Ashhuuu ♡</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+:root{--cream:#f7f0e9;--paper:#fffaf5;--ink:#463b37;--muted:#88766d;--rose:#c98283;--rose2:#ead0c9;--line:#eaded5}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;line-height:1.65}
+button{font:inherit;cursor:pointer}.wrap{width:min(100% - 36px,900px);margin:auto}
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:64px 18px;position:relative;overflow:hidden;background:radial-gradient(circle at 15% 20%,#fff9f1 0,transparent 32%),radial-gradient(circle at 85% 80%,#efd9d2 0,transparent 35%),var(--cream)}
+.hero:before,.hero:after{content:"✿";position:absolute;color:#d9aaa0;font-size:45px;opacity:.45}.hero:before{top:9%;left:9%;transform:rotate(-18deg)}.hero:after{bottom:10%;right:10%;font-size:58px;transform:rotate(20deg)}
+.eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.72rem;color:var(--muted);font-weight:700}.hero h1{font:600 clamp(3.5rem,12vw,7.2rem)/1.02 'Playfair Display',serif;margin:14px 0;color:#654c47}.hero h1 em{color:var(--rose);font-weight:500}.hero p{max-width:520px;margin:20px auto;color:var(--muted);font-size:1.05rem}
+.pill{border:1px solid #c98f8c;color:#865d5b;background:#fff8f4;padding:13px 23px;border-radius:40px;font-weight:700;box-shadow:0 7px 20px #b9877620;transition:.2s}.pill:hover{transform:translateY(-2px);background:#fff}
+.scrollhint{margin-top:42px;color:#9b8378;font-size:.8rem;letter-spacing:.12em}
+section{padding:86px 0}.section-head{text-align:center;margin-bottom:34px}.section-head h2{font:500 clamp(2.1rem,6vw,3.2rem)/1.15 'Playfair Display',serif;margin:8px 0;color:#654c47}.section-head p{color:var(--muted);margin:8px auto;max-width:540px}
+.paper{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:clamp(24px,6vw,54px);box-shadow:0 16px 50px #6b4a3a0b}
+.letter{font:500 clamp(1.05rem,2.5vw,1.22rem)/1.95 'Playfair Display',serif;color:#5c4a44}.letter p{margin:0 0 18px}.sign{font-style:italic;color:#a56d6d;margin-top:25px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.polaroid{background:#fffdfb;padding:10px 10px 18px;box-shadow:0 9px 24px #6b4a3a14;transform:rotate(var(--r));transition:.25s}.polaroid:hover{transform:rotate(0) translateY(-5px)}.polaroid img{width:100%;aspect-ratio:4/5;object-fit:cover;background:#eaded5;display:block}.polaroid .placeholder{aspect-ratio:4/5;display:grid;place-items:center;text-align:center;padding:12px;background:linear-gradient(145deg,#f0ddd5,#e7d1c9);color:#886e65;font-size:.85rem}.polaroid p{text-align:center;margin:10px 0 0;font:italic 1rem 'Playfair Display',serif;color:#705951}
+.memory-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.memory{background:#fffaf6;border:1px solid var(--line);padding:22px;border-radius:16px}.memory b{display:block;font:500 1.22rem 'Playfair Display',serif;color:#805d57;margin-bottom:7px}.memory p{margin:0;color:var(--muted);font-size:.94rem}
+.gift-area{text-align:center}.gift{font-size:5rem;border:0;background:none;filter:drop-shadow(0 9px 10px #9a6a5540);transition:.25s}.gift:hover{transform:scale(1.1) rotate(-5deg)}.hidden-note{display:none;margin:24px auto 0;max-width:600px;animation:rise .7s ease}.hidden-note.show{display:block}@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.final{background:#654c47;color:#fff8f2;text-align:center;padding:80px 20px}.final h2{font:500 clamp(2.4rem,7vw,4rem)/1.15 'Playfair Display',serif;margin:10px auto 18px}.final p{max-width:570px;margin:0 auto;color:#f1ddd5}.footer{text-align:center;padding:22px;color:#9b8378;font-size:.8rem}
+.music{position:fixed;right:16px;bottom:16px;z-index:5;border:1px solid #e4c9c0;background:#fffaf5;color:#765650;border-radius:40px;padding:10px 15px;box-shadow:0 6px 20px #553a2b20;font-size:.85rem}
+.smallnote{font-size:.82rem;color:var(--muted);text-align:center;margin-top:20px}
+@media(max-width:650px){.gallery{grid-template-columns:repeat(2,1fr);gap:12px}.memory-grid{grid-template-columns:1fr}section{padding:65px 0}.hero:before{left:4%}.hero:after{right:4%}}
+</style>
+</head>
+<body>
+<header class="hero">
+ <div>
+  <div class="eyebrow">A little something made with love</div>
+  <h1>Happy Birthday,<br><em>Ashhuuu</em> ♡</h1>
+  <p>For all the laughs, the long talks, the random madness, and the kind of friendship that makes life feel a little softer.</p>
+  <button class="pill" onclick="document.querySelector('#letter').scrollIntoView({behavior:'smooth'})">Open your little surprise ↓</button>
+  <div class="scrollhint">MADE JUST FOR YOU · 26 NOVEMBER</div>
+ </div>
+</header>
+
+<main>
+<section id="letter">
+ <div class="wrap">
+  <div class="section-head"><div class="eyebrow">A note from me to you</div><h2>Things I don't say enough</h2><p>So here's a little reminder, in case you ever forget.</p></div>
+  <article class="paper letter">
+   <p>Dear Ashhuuu,</p>
+   <p>Happy birthday to one of my favourite humans. I don't think you realise how much your presence means to me. Somewhere between all our conversations, random plans, stupid jokes and serious talks, you became one of those people I know I can count on.</p>
+   <p>Thank you for being you — for listening, for showing up, for making ordinary days memorable, and for being someone with whom I can be completely myself. I hope this new year brings you the kind of happiness you quietly wish for, opportunities that excite you, peace that stays, and countless reasons to smile.</p>
+   <p>Whatever changes, I hope you always know that you have someone cheering for you. I'm proud of you, I'm grateful for you, and I'm really lucky to call you my best friend.</p>
+   <p>Here's to more memories, more laughter, more adventures and many more birthdays to celebrate. Please never become less you.</p>
+   <p class="sign">With lots of love (and unlimited teasing),<br>Your favourite human ♡</p>
+  </article>
+ </div>
+</section>
+
+<section id="gallery" style="background:#f1e7df">
+ <div class="wrap">
+  <div class="section-head"><div class="eyebrow">Little pieces of us</div><h2>Our memory lane 📸</h2><p>Replace these placeholders with your favourite pictures together. Each one deserves its own little moment.</p></div>
+  <div class="gallery">
+   <div class="polaroid" style="--r:-2deg"><div class="placeholder">Add your first<br>favourite photo here</div><p>One for the memories</p></div>
+   <div class="polaroid" style="--r:2deg"><div class="placeholder">Add a silly<br>picture here</div><p>Our usual nonsense</p></div>
+   <div class="polaroid" style="--r:-1deg"><div class="placeholder">Add a favourite<br>day out here</div><p>A day to remember</p></div>
+   <div class="polaroid" style="--r:2deg"><div class="placeholder">Add a candid<br>moment here</div><p>Just being us</p></div>
+   <div class="polaroid" style="--r:-2deg"><div class="placeholder">Add a photo<br>that makes you laugh</div><p>Never getting over this</p></div>
+   <div class="polaroid" style="--r:1deg"><div class="placeholder">Add one more<br>favourite photo</div><p>To many more ♡</p></div>
+  </div>
+  <div class="smallnote">Tip: put your pictures in the <b>photos</b> folder and follow the README to add them here.</div>
+ </div>
+</section>
+
+<section id="memories">
+ <div class="wrap">
+  <div class="section-head"><div class="eyebrow">The lore is real</div><h2>Our kind of memories</h2><p>Some things are funny only to us. That's what makes them special.</p></div>
+  <div class="memory-grid">
+   <div class="memory"><b>The endless conversations</b><p>Those talks that start with “just 5 minutes” and somehow turn into the whole evening.</p></div>
+   <div class="memory"><b>The inside jokes</b><p>One random word, one look, one reference — and we're both laughing like idiots.</p></div>
+   <div class="memory"><b>The dependable one</b><p>For the serious days, the confusing days, and the “I need to tell you something” moments.</p></div>
+   <div class="memory"><b>More stories loading…</b><p>Our best memories are still ahead of us. Let's keep making them.</p></div>
+  </div>
+  <p class="smallnote">Personalise these cards with your real jokes, nicknames and unforgettable moments before sharing.</p>
+ </div>
+</section>
+
+<section class="gift-area" style="background:#f1e7df">
+ <div class="wrap">
+  <div class="section-head"><div class="eyebrow">One last thing</div><h2>There's a little gift for you</h2><p>Go on. You know you want to open it.</p></div>
+  <button class="gift" id="gift" aria-label="Open birthday gift">🎁</button>
+  <div class="hidden-note paper" id="surprise">
+   <div class="eyebrow">Surprise, Ashhuuu!</div>
+   <h2 style="font:500 2rem 'Playfair Display',serif;color:#805d57">You are very, very loved. ♡</h2>
+   <p>Not every person becomes a safe place, a favourite notification, a partner in nonsense and a constant source of comfort. Thank you for being all of that. This little website is just a tiny way of saying: you matter. A lot.</p>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer class="final">
+ <div class="eyebrow" style="color:#e8c4b9">To my favourite human</div>
+ <h2>Here's to you,<br>today and always.</h2>
+ <p>I hope you look back at this year with a full heart, and forward to the next one with excitement. Keep being the wonderful person you are. Happy birthday, Ashhuuu. ♡</p>
+ <p style="margin-top:28px;font:italic 1.15rem 'Playfair Display',serif">Always in your corner.</p>
+</footer>
+<div class="footer">Made with ♡, just for Ashhuuu · 26.11.2026</div>
+
+<audio id="bgmusic" loop preload="none"><source src="music/your-song.mp3" type="audio/mpeg"></audio>
+<button class="music" id="musicBtn">♫ Play our song</button>
+<script>
+document.getElementById('gift').addEventListener('click',()=>{
+ document.getElementById('surprise').classList.add('show');
+ document.getElementById('gift').textContent='💝';
+ document.getElementById('surprise').scrollIntoView({behavior:'smooth',block:'center'});
+});
+const audio=document.getElementById('bgmusic'), btn=document.getElementById('musicBtn');
+btn.addEventListener('click',async()=>{
+ if(audio.paused){
+  try{await audio.play();btn.textContent='Ⅱ Pause our song';}
+  catch(e){btn.textContent='Add your-song.mp3 first';}
+ }else{audio.pause();btn.textContent='♫ Play our song';}
+});
+</script>
+</body>
+</html>
