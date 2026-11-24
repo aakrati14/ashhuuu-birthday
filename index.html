@@ -102,20 +102,42 @@ section{padding:86px 0}.section-head{text-align:center;margin-bottom:34px}.secti
 </footer>
 <div class="footer">Made with ♡, just for Ashhuuu · 26.11.2026</div>
 
-<audio id="bgmusic" loop preload="none"><source src="your-song.mp3" type="audio/mpeg"></audio>
-<button class="music" id="musicBtn">♫ Play our song</button>
+
+<audio id="bgmusic" loop preload="auto">
+  <source src="./your-song.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music" id="musicBtn">
+  ♫ Play Tu Chahiye ❤️
+</button>
+
 <script>
-document.getElementById('gift').addEventListener('click',()=>{
- document.getElementById('surprise').classList.add('show');
- document.getElementById('gift').textContent='💝';
- document.getElementById('surprise').scrollIntoView({behavior:'smooth',block:'center'});
+const audio = document.getElementById('bgmusic');
+const btn = document.getElementById('musicBtn');
+
+// Try to start music as soon as the page opens
+window.addEventListener('load', async () => {
+  try {
+    await audio.play();
+    btn.textContent = '♫ Pause our song';
+  } catch (error) {
+    btn.textContent = '❤️ Tap to start Tu Chahiye';
+  }
 });
-const audio=document.getElementById('bgmusic'), btn=document.getElementById('musicBtn');
-btn.addEventListener('click',async()=>{
- if(audio.paused){
-  try{await audio.play();btn.textContent='Ⅱ Pause our song';}
-  catch(e){btn.textContent='Add your-song.mp3 first';}
- }else{audio.pause();btn.textContent='♫ Play our song';}
+
+// Fallback: start music when he taps
+btn.addEventListener('click', async () => {
+  try {
+    if (audio.paused) {
+      await audio.play();
+      btn.textContent = '♫ Pause our song';
+    } else {
+      audio.pause();
+      btn.textContent = '♫ Play Tu Chahiye ❤️';
+    }
+  } catch (error) {
+    btn.textContent = 'Please tap to play ❤️';
+  }
 });
 </script>
 </body>
