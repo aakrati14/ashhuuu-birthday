@@ -101,43 +101,73 @@ section{padding:86px 0}.section-head{text-align:center;margin-bottom:34px}.secti
  <p style="margin-top:28px;font:italic 1.15rem 'Playfair Display',serif">Always in your corner.</p>
 </footer>
 <div class="footer">Made with ♡, just for Ashhuuu · 26.11.2026</div>
-
+ 
+<!-- Opening screen -->
+<div id="welcomeScreen" style="
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  background:linear-gradient(145deg,#211725,#59334c,#a86c83);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:25px;
+  color:white;
+  font-family:Arial,sans-serif;
+">
+  <div style="font-size:45px;margin-bottom:20px;">♡</div>
+  <p style="letter-spacing:4px;font-size:12px;">A LITTLE SURPRISE FOR YOU</p>
+  <h1 style="font-family:Georgia,serif;font-size:42px;">
+    Hey, Ashhuuu! ❤️
+  </h1>
+  <p style="font-family:Georgia,serif;font-size:20px;">
+    Someone has something special for you...
+  </p>
+  <button id="openSurprise" style="
+    margin-top:35px;
+    padding:17px 30px;
+    border:0;
+    border-radius:40px;
+    background:#f3c5d4;
+    color:#59334c;
+    font-size:16px;
+    cursor:pointer;
+  ">
+    ❤️ Open your surprise
+  </button>
+  <p style="font-size:12px;margin-top:20px;">
+    Tap to begin our little journey
+  </p>
+</div>
 
 <audio id="bgmusic" loop preload="auto">
-  <source src="./your-song.mp3" type="audio/mpeg">
+  <source src="your-song.mp3" type="audio/mpeg">
 </audio>
-
-<button class="music" id="musicBtn">
-  ♫ Play Tu Chahiye ❤️
-</button>
 
 <script>
 const audio = document.getElementById('bgmusic');
-const btn = document.getElementById('musicBtn');
 
-// Try to start music as soon as the page opens
-window.addEventListener('load', async () => {
+document.getElementById('openSurprise').addEventListener('click', async () => {
   try {
     await audio.play();
-    btn.textContent = '♫ Pause our song';
+
+    document.getElementById('welcomeScreen').style.display = 'none';
+
+    window.scrollTo({top: 0, behavior: 'smooth'});
   } catch (error) {
-    btn.textContent = '❤️ Tap to start Tu Chahiye';
+    alert('Please check that your song file is uploaded correctly.');
   }
 });
 
-// Fallback: start music when he taps
-btn.addEventListener('click', async () => {
-  try {
-    if (audio.paused) {
-      await audio.play();
-      btn.textContent = '♫ Pause our song';
-    } else {
-      audio.pause();
-      btn.textContent = '♫ Play Tu Chahiye ❤️';
-    }
-  } catch (error) {
-    btn.textContent = 'Please tap to play ❤️';
-  }
+document.getElementById('gift').addEventListener('click', () => {
+  document.getElementById('surprise').classList.add('show');
+  document.getElementById('gift').textContent = '💝';
+  document.getElementById('surprise').scrollIntoView({
+    behavior: 'smooth',
+    block: 'center'
+  });
 });
 </script>
 </body>
